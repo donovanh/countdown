@@ -164,9 +164,6 @@ input[type=number] {
   0% {
     transform: translate(-50%, -50%);
   }
-  50% {
-    opacity: 0;
-  }
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) translateY(-5rem) scale(.5) rotateX(-75deg);

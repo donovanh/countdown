@@ -1,8 +1,8 @@
 $(function() {
-  window.minutes = 9;
-  window.seconds = 11;
+  // window.minutes = 9;
+  // window.seconds = 11;
 
-  startCountdown();
+  // startCountdown();
   $('#js-start-countdown').click(function() {
     window.minutes = $('input[name=minutes]').val();
     window.seconds = $('input[name=seconds]').val();
