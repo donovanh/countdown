@@ -4,7 +4,8 @@ $(function() {
   $('#js-start-countdown').click(function() {
     window.minutes = $('input[name=minutes]').val();;
     window.seconds = $('input[name=seconds]').val();;
-    window.next = $('input[name=speaker]').val();
+    $('#js-next').text($('input[name=next]').val());
+    $('#js-talk-type').text($('input[name=talk-type]').val());
     startCountdown();
   });
 });
@@ -13,7 +14,7 @@ var interval;
 function startCountdown() {
   $('#input-container').hide();
   $('#countdown-container').show();
-  $('#js-next').text(window.next);
+
   displayValue('#js-minutes', window.minutes);
   displayValue('#js-seconds', window.seconds);
 
@@ -27,6 +28,9 @@ function startCountdown() {
         displayValue('#js-minutes', window.minutes);
         displayValue('#js-seconds', window.seconds);
         window.seconds = 60;
+      } else {
+        $('#js-countdown').addClass('remove');
+        $('#js-next-container').addClass('bigger');
       }
     }
   }, 1000);

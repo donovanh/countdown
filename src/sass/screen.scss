@@ -1,3 +1,6 @@
+$bezier-in: cubic-bezier(0,.9,.5,1.2);
+$bezier-out: cubic-bezier(0,.9,.56,1.2);
+
 
 @font-face {
   font-family: Museo Sans;
@@ -10,13 +13,16 @@
   src: url("../fonts/MuseoSans_500.otf") format("opentype");
 }
 
-body {
-  background: #000000 url(../images/bg.jpg);
-  background-size: cover;
+html, body {
+  background: #000 url(../images/bg.jpg);
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
   color: #fff;
   font-family: Museo Sans, sans-serif;
-  overflow: hidden;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -33,22 +39,44 @@ p {
 }
 
 input {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  padding: .5rem;
 }
 
 input[type=number] {
   width: 5rem;
 }
 
-input[type=submit] {
-  font-size: 15rem;
-}
-
 .next-up {
   color: #fff;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 0 0 6rem;
+  margin: 0 0 3rem;
+  transition: all .5s $bezier-in;
+
+  .next-person {
+    display: block;
+    font-size: 5rem;
+    transition: all .5s $bezier-in;
+  }
+
+  &.bigger {
+    margin-bottom: 0;
+
+    .next-person {
+      font-size: 6rem;
+    }
+  }
+}
+
+.ull-logo {
+  margin-top: -10rem;
+  margin-bottom: 3rem;
+}
+
+.talk-type {
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .countdown {
@@ -56,8 +84,12 @@ input[type=submit] {
   transform-style: preserve3d;
   perspective: 500px;
   height: 10rem;
-  width: 32rem;
+  width: 26rem;
   margin: 0 auto;
+
+  &.remove {
+    animation: hide-countdown 1s $bezier-out forwards;
+  }
 }
 
 .minutes, .separator, .seconds {
@@ -68,7 +100,7 @@ input[type=submit] {
   position: relative;
   line-height: 10rem;
   text-align: center;
-  width: 15rem;
+  width: 12rem;
 }
 
 .separator {
@@ -87,9 +119,6 @@ input[type=submit] {
   width: 10rem;
 }
 
-$bezier-in: cubic-bezier(0,.9,.5,1.2);
-$bezier-out: cubic-bezier(0,.9,.56,1.2);
-
 .current {
   animation: pulse 1s linear infinite;
 }
@@ -100,6 +129,13 @@ $bezier-out: cubic-bezier(0,.9,.56,1.2);
 
 .old {
   animation: hide-old 2s $bezier-out forwards;
+}
+
+@keyframes hide-countdown {
+  to {
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 @keyframes pulse {

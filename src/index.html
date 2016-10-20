@@ -9,16 +9,24 @@
 </head>
 <body>
   <section id="input-container" class="container">
-    <p><input type="text" name="speaker" placeholder="Next speaker..."></p>
+    <p><input type="text" name="next" placeholder="Speaker name"></p>
+    <p><input type="text" name="talk-type" placeholder="Talk type"></p>
     <p>
-      Minutes: <input name="minutes" type="number" value="10">
-      Seconds: <input name="seconds" type="number" value="60">
+      Minutes: <input name="minutes" type="number" value="10"></p>
+      <p>
+      Seconds: <input name="seconds" type="number" value="59">
     </p>
     <p><input type="submit" id="js-start-countdown" value="Start countdown">
   </section>
 
   <section id="countdown-container" class="container" style="display: none">
-    <section class="next-up">Next: <span id="js-next"></span></section>
+    <img class="ull-logo" src="images/ull.png" width="100">
+    <section id="js-next-container" class="next-up">
+      Next Up
+      <span id="js-next" class="next-person"></span>
+      <span id="js-talk-type" class="talk-type"></span>
+    </section>
+
     <article id="js-countdown" class="countdown">
       <section id="js-minutes" class="minutes"></section>
       <section id="js-separator" class="separator">:</section>
