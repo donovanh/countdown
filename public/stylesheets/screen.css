@@ -71,7 +71,7 @@ input[type=number] {
   -webkit-perspective: 500px;
           perspective: 500px;
   height: 10rem;
-  width: 26rem;
+  width: 32rem;
   margin: 0 auto; }
   .countdown.remove {
     -webkit-animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
@@ -101,19 +101,19 @@ input[type=number] {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 10rem; }
+  width: 11rem; }
 
 .current {
   -webkit-animation: pulse 1s linear infinite;
           animation: pulse 1s linear infinite; }
 
 .new {
-  -webkit-animation: show-new 0.4s cubic-bezier(0, 0.9, 0.5, 1.2) forwards;
-          animation: show-new 0.4s cubic-bezier(0, 0.9, 0.5, 1.2) forwards; }
+  -webkit-animation: show-new 0.2s cubic-bezier(0, 0.9, 0.5, 1.2) forwards;
+          animation: show-new 0.2s cubic-bezier(0, 0.9, 0.5, 1.2) forwards; }
 
 .old {
-  -webkit-animation: hide-old 2s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
-          animation: hide-old 2s cubic-bezier(0, 0.9, 0.56, 1.2) forwards; }
+  -webkit-animation: hide-old 0.8s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+          animation: hide-old 0.8s cubic-bezier(0, 0.9, 0.56, 1.2) forwards; }
 
 @-webkit-keyframes hide-countdown {
   to {
@@ -144,8 +144,8 @@ input[type=number] {
 @-webkit-keyframes show-new {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg);
-            transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg); }
+    -webkit-transform: translate(-50%, -50%) translateY(-1rem) scale(0.9) rotateX(-10deg);
+            transform: translate(-50%, -50%) translateY(-1rem) scale(0.9) rotateX(-10deg); }
   100% {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); } }
@@ -153,8 +153,8 @@ input[type=number] {
 @keyframes show-new {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg);
-            transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg); }
+    -webkit-transform: translate(-50%, -50%) translateY(-1rem) scale(0.9) rotateX(-10deg);
+            transform: translate(-50%, -50%) translateY(-1rem) scale(0.9) rotateX(-10deg); }
   100% {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); } }
@@ -163,20 +163,20 @@ input[type=number] {
   0% {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-  80% {
-    opacity: 0; }
+  20% {
+    opacity: 0.2; }
   100% {
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%) translateY(-5rem) scale(0.5) rotateX(-75deg);
-            transform: translate(-50%, -50%) translateY(-5rem) scale(0.5) rotateX(-75deg); } }
+    -webkit-transform: translate(-50%, -50%) translateY(-2rem) scale(0.5) rotateX(-25deg);
+            transform: translate(-50%, -50%) translateY(-2rem) scale(0.5) rotateX(-25deg); } }
 
 @keyframes hide-old {
   0% {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-  80% {
-    opacity: 0; }
+  20% {
+    opacity: 0.2; }
   100% {
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%) translateY(-5rem) scale(0.5) rotateX(-75deg);
-            transform: translate(-50%, -50%) translateY(-5rem) scale(0.5) rotateX(-75deg); } }
+    -webkit-transform: translate(-50%, -50%) translateY(-2rem) scale(0.5) rotateX(-25deg);
+            transform: translate(-50%, -50%) translateY(-2rem) scale(0.5) rotateX(-25deg); } }

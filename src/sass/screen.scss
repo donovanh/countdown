@@ -84,7 +84,7 @@ input[type=number] {
   transform-style: preserve3d;
   perspective: 500px;
   height: 10rem;
-  width: 26rem;
+  width: 32rem;
   margin: 0 auto;
 
   &.remove {
@@ -103,6 +103,10 @@ input[type=number] {
   width: 100%;
 }
 
+.minutes {
+  
+}
+
 .separator {
   animation: pulse 1s linear infinite;
   width: 2rem;
@@ -116,7 +120,7 @@ input[type=number] {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 10rem;
+  width: 11rem;
 }
 
 .current {
@@ -124,11 +128,11 @@ input[type=number] {
 }
 
 .new {
-  animation: show-new .4s $bezier-in forwards;
+  animation: show-new .2s $bezier-in forwards;
 }
 
 .old {
-  animation: hide-old 2s $bezier-out forwards;
+  animation: hide-old .8s $bezier-out forwards;
 }
 
 @keyframes hide-countdown {
@@ -153,7 +157,7 @@ input[type=number] {
 @keyframes show-new {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) translateY(-2rem) scale(.8) rotateX(-20deg);
+    transform: translate(-50%, -50%) translateY(-1rem) scale(.9) rotateX(-10deg);
   }
   100% {
     transform: translate(-50%, -50%);
@@ -164,11 +168,11 @@ input[type=number] {
   0% {
     transform: translate(-50%, -50%);
   }
-  80% {
-    opacity: 0;
+  20% {
+    opacity: 0.2;
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) translateY(-5rem) scale(.5) rotateX(-75deg);
+    transform: translate(-50%, -50%) translateY(-2rem) scale(.5) rotateX(-25deg);
   }
 }

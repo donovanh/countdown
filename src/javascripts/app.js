@@ -1,9 +1,11 @@
 $(function() {
-  
-  //startCountdown();
+  window.minutes = 9;
+  window.seconds = 11;
+
+  startCountdown();
   $('#js-start-countdown').click(function() {
-    window.minutes = $('input[name=minutes]').val();;
-    window.seconds = $('input[name=seconds]').val();;
+    window.minutes = $('input[name=minutes]').val();
+    window.seconds = $('input[name=seconds]').val();
     $('#js-next').text($('input[name=next]').val());
     $('#js-talk-type').text($('input[name=talk-type]').val());
     startCountdown();
