@@ -1,0 +1,138 @@
+
+@font-face {
+  font-family: Museo Sans;
+  src: url("/fonts/MuseoSans_500.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Museo Sans;
+  font-weight: bold;
+  src: url("/fonts/MuseoSans_500.otf") format("opentype");
+}
+
+body {
+  background: #000000 url(/images/bg.jpg);
+  background-size: cover;
+  color: #fff;
+  font-family: Museo Sans, sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+p {
+  font-size: 2rem;
+}
+
+input {
+  font-size: 3rem;
+}
+
+input[type=number] {
+  width: 5rem;
+}
+
+input[type=submit] {
+  font-size: 15rem;
+}
+
+.next-up {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 0 6rem;
+}
+
+.countdown {
+  display: flex;
+  transform-style: preserve3d;
+  perspective: 500px;
+  height: 10rem;
+  width: 32rem;
+  margin: 0 auto;
+}
+
+.minutes, .separator, .seconds {
+  display: block;
+  color: #fff;
+  height: 10rem;
+  font-size: 10rem;
+  position: relative;
+  line-height: 10rem;
+  text-align: center;
+  width: 15rem;
+}
+
+.separator {
+  animation: pulse 1s linear infinite;
+  width: 2rem;
+}
+
+.new, .old, .current {
+  color: #fff;
+  position: absolute;
+  border-radius: 1rem;
+  height: 10rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+}
+
+$bezier-in: cubic-bezier(0,.9,.5,1.2);
+$bezier-out: cubic-bezier(0,.9,.56,1.2);
+
+.current {
+  animation: pulse 1s linear infinite;
+}
+
+.new {
+  animation: show-new .4s $bezier-in forwards;
+}
+
+.old {
+  animation: hide-old 2s $bezier-out forwards;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-new {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-2rem) scale(.8) rotateX(-20deg);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes hide-old {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-5rem) scale(.5) rotateX(-75deg);
+  }
+}

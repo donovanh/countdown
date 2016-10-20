@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+  <title>Countdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheets/screen.css">
+</head>
+<body>
+  <section id="input-container" class="container">
+    <p><input type="text" name="speaker" placeholder="Next speaker..."></p>
+    <p>
+      Minutes: <input name="minutes" type="number" value="10">
+      Seconds: <input name="seconds" type="number" value="60">
+    </p>
+    <p><input type="submit" id="js-start-countdown" value="Start countdown">
+  </section>
+
+  <section id="countdown-container" class="container" style="display: none">
+    <section class="next-up">Next: <span id="js-next"></span></section>
+    <article id="js-countdown" class="countdown">
+      <section id="js-minutes" class="minutes"></section>
+      <section id="js-separator" class="separator">:</section>
+      <section id="js-seconds" class="seconds"></section>
+    </article>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+  <script src="/javascripts/app.js"></script>
+</body>
+</html>
