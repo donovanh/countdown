@@ -27,9 +27,9 @@ function startCountdown() {
     } else {
       if (window.minutes > 0) {
         window.minutes--;
+        window.seconds = 59;
         displayValue('#js-minutes', window.minutes);
         displayValue('#js-seconds', window.seconds);
-        window.seconds = 60;
       } else {
         $('#js-countdown').addClass('remove');
         $('#js-next-container').addClass('bigger');
