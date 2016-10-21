@@ -63,6 +63,14 @@ gulp.task('html', function() {
     .pipe(gulp.dest('public/'))
 });
 
+gulp.task('miscfiles', function() {
+  gulp.src([
+    './src/serviceworker.js',
+    './src/serviceworker-cache-polyfill.js'
+  ])
+    .pipe(gulp.dest('public/'))
+});
+
 gulp.task('browser-sync', ['styles', 'scripts'], function() {
   browserSync({
     server: {
@@ -90,5 +98,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', function() {
-    gulp.start('styles', 'scripts', 'images', 'html', 'browser-sync', 'watch');
+    gulp.start('styles', 'scripts', 'images', 'html', 'miscfiles', 'browser-sync', 'watch');
 });

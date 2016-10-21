@@ -84,7 +84,7 @@ input[type=number] {
   transform-style: preserve3d;
   perspective: 500px;
   height: 10rem;
-  width: 26rem;
+  width: 31rem;
   margin: 0 auto;
 
   &.remove {
@@ -104,17 +104,15 @@ input[type=number] {
 }
 
 .minutes {
-  margin-right: 1rem;
   text-align: right;
 }
 
 .seconds {
-  margin-left: 1rem;
   text-align: left;
 }
 
 .separator {
-  //animation: pulse 1s linear infinite;
+  margin: 0 1rem 0 0;
   width: 2rem;
 }
 
@@ -126,11 +124,7 @@ input[type=number] {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 11rem;
-}
-
-.current {
-  animation: pulse 1s linear infinite;
+  width: 13rem;
 }
 
 .new {
@@ -145,18 +139,6 @@ input[type=number] {
   to {
     height: 0;
     overflow: hidden;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .8;
-  }
-  100% {
-    opacity: 1;
   }
 }
 

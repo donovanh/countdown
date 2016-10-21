@@ -71,7 +71,7 @@ input[type=number] {
   -webkit-perspective: 500px;
           perspective: 500px;
   height: 10rem;
-  width: 26rem;
+  width: 31rem;
   margin: 0 auto; }
   .countdown.remove {
     -webkit-animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
@@ -88,14 +88,13 @@ input[type=number] {
   width: 100%; }
 
 .minutes {
-  margin-right: 1rem;
   text-align: right; }
 
 .seconds {
-  margin-left: 1rem;
   text-align: left; }
 
 .separator {
+  margin: 0 1rem 0 0;
   width: 2rem; }
 
 .new, .old, .current {
@@ -107,11 +106,7 @@ input[type=number] {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 11rem; }
-
-.current {
-  -webkit-animation: pulse 1s linear infinite;
-          animation: pulse 1s linear infinite; }
+  width: 13rem; }
 
 .new {
   -webkit-animation: show-new 0.4s cubic-bezier(0, 0.9, 0.5, 1.2) forwards;
@@ -130,22 +125,6 @@ input[type=number] {
   to {
     height: 0;
     overflow: hidden; } }
-
-@-webkit-keyframes pulse {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: .8; }
-  100% {
-    opacity: 1; } }
-
-@keyframes pulse {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: .8; }
-  100% {
-    opacity: 1; } }
 
 @-webkit-keyframes show-new {
   0% {

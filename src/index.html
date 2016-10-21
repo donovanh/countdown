@@ -34,5 +34,11 @@
     </article>
   </section>
   <script src="javascripts/app.js"></script>
+  <!-- Service worker stuff -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceworker.js', {scope: './'});
+    }
+  </script>
 </body>
 </html>
