@@ -103,6 +103,16 @@ input[type=number] {
   width: 100%;
 }
 
+.minutes {
+  margin-right: 1rem;
+  text-align: right;
+}
+
+.seconds {
+  margin-left: 1rem;
+  text-align: left;
+}
+
 .separator {
   //animation: pulse 1s linear infinite;
   width: 2rem;

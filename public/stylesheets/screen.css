@@ -87,6 +87,14 @@ input[type=number] {
   text-align: center;
   width: 100%; }
 
+.minutes {
+  margin-right: 1rem;
+  text-align: right; }
+
+.seconds {
+  margin-left: 1rem;
+  text-align: left; }
+
 .separator {
   width: 2rem; }
 
