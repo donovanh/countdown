@@ -86,6 +86,7 @@ input[type=number] {
   height: 10rem;
   width: 31rem;
   margin: 0 auto;
+  overflow: hidden;
 
   &.remove {
     animation: hide-countdown 1s $bezier-out forwards;

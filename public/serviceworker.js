@@ -3,7 +3,7 @@ importScripts('serviceworker-cache-polyfill.js');
 
 // Cache name - Update to invalidate current cache
 var CACHE_NAME = 'install-cache-';
-var VERSION = '3';
+var VERSION = '4';
 
 var urlsToCache = [
   '/',
