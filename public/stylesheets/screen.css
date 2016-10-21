@@ -72,11 +72,11 @@ input[type=number] {
           perspective: 500px;
   height: 10rem;
   width: 31rem;
-  margin: 0 auto;
-  overflow: hidden; }
+  margin: 0 auto; }
   .countdown.remove {
     -webkit-animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
-            animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards; }
+            animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+    overflow: hidden; }
 
 .minutes, .separator, .seconds {
   display: block;
